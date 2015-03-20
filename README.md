@@ -1,2 +1,2 @@
 # SimpleBlogLoc
-Simple Blog Symfony2 Project
+Hello World. This is Simple Blog Symfony2 Project
