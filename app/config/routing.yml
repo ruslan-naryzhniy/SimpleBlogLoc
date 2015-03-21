@@ -1,0 +1,5 @@
+krendel_blog:
+    resource: "@KrendelBlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

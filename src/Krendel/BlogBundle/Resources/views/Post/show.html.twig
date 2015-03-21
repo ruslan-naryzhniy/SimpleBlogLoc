@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>{{ entity.title }}</h1>
+            <p class="blog-post-meta">
+                {{ entity.created|date('d.m.Y') }}
+                {% if entity.published %}
+                    <span class="glyphicon glyphicon-ok"></span>
+                {% else %}
+                    <span class="glyphicon glyphicon-remove"></span>
+                {% endif %}
+                <a href="{{ path('_edit', { 'id': entity.id }) }}">Edit</a>
+            </p>
+            <p>{{ entity.text }}</p>
+            
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
